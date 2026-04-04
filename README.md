@@ -10,6 +10,12 @@ REFINE → PLAN → BUILD → TEST → REVIEW
 
 Each stage is a dedicated agent. A single orchestrator command chains them sequentially with human approval gates between each stage.
 
+## Install
+
+```
+npx @anthropic-ai/claude-code skill add software-engineering-skills
+```
+
 ## Usage
 
 Run the full pipeline:

@@ -10,7 +10,7 @@ Multi-agent pipeline for end-to-end feature development.
 ## Install
 
 ```
-npx software-engineering-skills
+npx @anthropic-ai/claude-code skill add software-engineering-skills
 ```
 
 ## Usage
