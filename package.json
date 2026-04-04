@@ -1,0 +1,33 @@
+{
+  "name": "software-engineering-skills",
+  "version": "1.0.0",
+  "description": "Multi-agent engineering pipeline: REFINE, PLAN, BUILD, TEST, REVIEW. Orchestrates end-to-end feature development with TDD, incremental builds, and code health analysis. Language-agnostic.",
+  "author": {
+    "name": "Arman Kamal",
+    "email": "arman1790@gmail.com"
+  },
+  "license": "MIT",
+  "bin": {
+    "swe": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "agents/",
+    "commands/",
+    ".claude-plugin/",
+    "SKILL.md",
+    "README.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "software-engineering",
+    "tdd",
+    "code-review",
+    "multi-agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armk17/software-engineering-skills.git"
+  }
+}
