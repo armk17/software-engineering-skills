@@ -1,0 +1,9 @@
+{
+  "name": "software-engineering-skills",
+  "version": "1.0.0",
+  "description": "Multi-agent engineering pipeline: REFINE, PLAN, BUILD, TEST, REVIEW. Orchestrates end-to-end feature development with TDD, incremental builds, and code health improvement. Language-agnostic.",
+  "author": {
+    "name": "Arman Kamal",
+    "email": "arman1790@gmail.com"
+  }
+}
