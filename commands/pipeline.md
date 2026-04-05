@@ -34,7 +34,12 @@ Initial request: $ARGUMENTS
    - If the user says backend → ask which language/framework, then load `backend-engineering`
    - Otherwise → proceed with generic agents only
 
-5. Record the decision (project type + whether specialized plugin is active) and carry it through all subsequent stages
+5. **Determine review strictness level**:
+   - Check `CLAUDE.md` for an explicit strictness declaration (e.g., `review-strictness: L4`)
+   - If not declared, ask the user: "What review strictness level should I use? (L1 Prototype / L2 Internal / L3 Production [default] / L4 Compliance / L5 Safety-critical)"
+   - Default to **L3** if the user skips or is unsure
+
+6. Record the decisions (project type, specialized plugin, strictness level) and carry them through all subsequent stages
 
 ---
 
@@ -92,9 +97,9 @@ Initial request: $ARGUMENTS
 
 **Goal**: Code health and merge readiness
 
-1. Launch the `reviewer` agent
+1. Launch the `reviewer` agent with the strictness level determined in Stage 0 (e.g., "Review at strictness level L3")
 2. If `backend-engineering` was confirmed in Stage 0: instruct reviewer to invoke it for backend-specific review patterns and conventions
-3. Present review findings categorized by severity (critical, important, suggestions)
+3. Present the review scorecard and findings categorized by severity (critical, important, suggestions)
 3. If critical issues are found, coordinate with the builder to fix, then re-review
 4. After fixes, re-run the reviewer to verify
 5. **GATE**: Present final review summary. Ask — "Code is review-clean. Ready to proceed? (yes / address suggestions / re-review)"
